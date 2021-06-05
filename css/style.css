@@ -161,7 +161,7 @@ body textarea:visited {
 .container_title h4,
 .container_title h5,
 .container_title h6,
-.container_title p {
+.container_title {
     color: #292d2d;
     text-transform: uppercase;
     font-size: 30px;
@@ -175,7 +175,7 @@ body textarea:visited {
 .container_title h4 span,
 .container_title h5 span,
 .container_title h6 span,
-.container_title p span {
+.container_title span {
     color: #4aa5a9
 }
 

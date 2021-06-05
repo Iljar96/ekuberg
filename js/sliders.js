@@ -127,13 +127,14 @@ let slider_brands = new Swiper('.brands__slider', {
 	observeParents: true,
 	slidesPerView: 2,
 	spaceBetween: 79,
+	grabCursor: true,
 	autoHeight: true,
 	speed: 800,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
 	//preloadImages: false,
-	//lazy: true,
+	lazy: true,
 	// Dotts
 	pagination: {
 		el: '.brands__pagination',
@@ -170,77 +171,17 @@ let slider_brands = new Swiper('.brands__slider', {
 	}
 });
 
-let products_catalog_mobile = new Swiper('.products-catalog-mobile', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
-	// observer: true,
-	// observeParents: true,
-	slidesPerView: 1,
-	// autoHeight: true,
-	speed: 800,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	pagination: {
-		el: '.brands__pagination',
-		clickable: true,
-	},
-	// Arrows
-	// navigation: {
-	// 	nextEl: '.about__more .more__item_next',
-	// 	prevEl: '.about__more .more__item_prev',
-	// },
-	breakpoints: {
-		320: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 3,
-		},
-		992: {
-			slidesPerView: 4,
-		},
-		1200: {
-			slidesPerView: 5,
-		},
-	},
-	on: {
-		lazyImageReady: function () {
-			ibg();
-		},
-	}
-});
 
-
-// var swiper = new Swiper(".mySwiper", {
-// 	slidesPerView: 1,
-// 	breakpoints: {
-// 		768: {
-// 			slidesPerView: 2,
-// 		},
-// 		1200: {
-// 			slidesPerView: 3,
-// 		},
-// 	},
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 	},
-// });
-
-//-------
 let slider_products;
 
-const sliderInit = () => {
-	slider_products = new Swiper(".mySwiper", {
+function sliderInit() {
+	slider_products = new Swiper(".products-swiper", {
 		slidesPerView: 1,
+		observer: true,
+		observeParents: true,
+		autoHeight: true,
+		speed: 800,
+		grabCursor: true,
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
@@ -253,8 +194,14 @@ const sliderInit = () => {
 			},
 		},
 		pagination: {
-			el: ".swiper-pagination",
+			el: ".products-swiper-pagination",
+			clickable: true,
 		},
+		on: {
+			lazyImageReady: function () {
+				ibg();
+			},
+		}
 	});
 }
 
@@ -263,9 +210,9 @@ if (window.matchMedia("(max-width: 1250px)").matches) {
 }
 
 window.addEventListener('resize', function (e) {
-	if (window.matchMedia("(min-width: 1250px)").matches) {
-		slider_products.destroy(true, true)
-	} else {
+	if (window.matchMedia("(max-width: 1250px)").matches && !document.querySelector('.swiper-container').classList.contains('swiper-container-initialized')) {
 		sliderInit();
+	} else if (window.matchMedia("(min-width: 1250px)").matches) {
+		slider_products.destroy(true, true);
 	}
 })

@@ -71,6 +71,13 @@
 	top: 50%;
 	margin: -25px 0px 0px 0px;
 	cursor: pointer;
+	transition: background-color 0.3s ease 0s;
+}
+
+@media (min-width: 991px){
+	.intro__arrow:hover {
+		background-color: rgba(0, 0, 0, .05);
+	}
 }
 
 .intro__arrow--prev {
@@ -212,6 +219,7 @@ margin-bottom: 60px;
 .products-card{
 	flex: 0 0 282px;
 	max-width: 322px;
+	height: 100%;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -220,19 +228,38 @@ margin-bottom: 60px;
 	border: 1px solid #4AA5A9;
 }
 .container__products .swiper-slide {
-	height: auto;
+	height: 100%;
 }
 
 @media (min-width: 1250px){
 	.container__products .swiper-wrapper {
 		transform: translate3d(0px, 0px, 0px) !important;
 		flex-wrap: wrap;
+		justify-content: space-between;
+		height: auto !important;
 	}
+	.container__products .swiper-slide {
+		flex: 0 0 22%;
+		margin-bottom: 2.7%;
+		height: auto;
+	}
+}
+.products-swiper-pagination {
+	display: none !important;
 }
 @media (max-width: 1250px){
 	.products-card{
 		margin: 0px auto;
 		height: 100%;
+	}
+	.products-swiper-pagination {
+		display: flex !important;
+		margin: 50px auto 0;
+	}
+}
+@media (max-width: 767px){
+	.products-swiper-pagination {
+		margin: 30px auto 0;
 	}
 }
 .products-card__img {
@@ -269,6 +296,7 @@ margin-bottom: 60px;
 	justify-content: center;
 	width: 80px;
 	height: 20px;
+	margin-bottom: 5px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
@@ -276,22 +304,20 @@ margin-bottom: 60px;
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
-.products-card__discount{
+.products-card__info {
+	display: flex;
+	flex-direction: column;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+.products-card__discount{
 	background: #D7233E;
 }
 .products-card__new{
-	position: absolute;
-	top: 25px;
-	left: 0;
 	background: #419640;
 }
 .products-card__hit{
-	position: absolute;
-	top: 50px;
-	left: 0;
 	background: #A79EE0;
 }
 .discount .products-card__discount,
@@ -502,17 +528,18 @@ margin: 0px 0px 30px 0px;
 .brands__slide {
 	display: flex;
 	align-items: center;
+	height: 100%;
 }
 .brands__slide img {
 	margin: 0px auto;
 }
 
-.brands__pagination {
+.pagination {
 	display: flex;
 	justify-content: center;
 }
 
-.brands__pagination .swiper-pagination-bullet {
+.swiper-pagination-bullet {
 	display: block;
 	width: 10px;
 	height: 10px;
@@ -523,7 +550,7 @@ margin: 0px 0px 30px 0px;
 	cursor: pointer;
 }
 
-.brands__pagination .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
 	background: #4AA5A9;
 }
 
@@ -534,6 +561,12 @@ margin: 0px 0px 30px 0px;
 /* why-our-cosmetics */
 .container_why-our-cosmetics {
 	margin-bottom: 86px;
+}
+
+@media (min-width: 767px) and (max-width: 1200px){
+	.cont-why {
+		width: 50% !important;
+	}
 }
 
 .container_why-our-cosmetics .container_title {
