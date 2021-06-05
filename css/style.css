@@ -152,6 +152,7 @@ body textarea:visited {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+		flex-wrap: wrap;
     width: 100%
 }
 
@@ -167,6 +168,18 @@ body textarea:visited {
     font-size: 30px;
     font-weight: 900;
     width: 100%
+}
+
+@media (max-width: 768px){
+	.container_title h1,
+	.container_title h2,
+	.container_title h3,
+	.container_title h4,
+	.container_title h5,
+	.container_title h6,
+	.container_title {
+		font-size: 24px;
+	}
 }
 
 .container_title h1 span,
@@ -221,6 +234,10 @@ body textarea:visited {
     text-align: center
 }
 
+.wrapper-all {
+	overflow-x: hidden;
+}
+
 .button {
     display: -webkit-box;
     display: -webkit-flex;
@@ -257,7 +274,8 @@ body textarea:visited {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    position: relative
+    position: relative;
+		align-items: center;
 }
 
 /* .burger {
@@ -515,7 +533,7 @@ footer .icon-facebook {
     background-color: #fff
 }
 
-.form-email-letters input:placeholder {
+.form-email-letters input::placeholder {
     color: #9d9f9f
 }
 
