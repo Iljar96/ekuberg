@@ -477,7 +477,7 @@ header .woocommerce-Price-amount {
 @media screen and (max-width: 1024px) {
     
     .footer-menu li a {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
     .container_logo {
@@ -571,11 +571,6 @@ header .woocommerce-Price-amount {
     }
 
     .header-bg__section {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .news__content__section {
         padding-left: 15px;
         padding-right: 15px;
     }

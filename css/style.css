@@ -305,8 +305,8 @@ body textarea:visited {
 		right: 0;
     top: 50%;
     transform: translateY(-50%);
-		width: 30px;
-		height: 18px;
+		width: 18px;
+		height: 16px;
 		cursor: pointer;
 		z-index: 13;
  }
@@ -426,6 +426,12 @@ body textarea:visited {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #292d2d
+}
+@media (max-width: 767px){
+	.container_footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 }
 
 .footer-menu {
@@ -575,7 +581,7 @@ footer .icon-facebook {
 }
 
 .copyright-footer p {
-    font-size: 13px;
+    font-size: 16px;
     color: #4aa6aa
 }
 
@@ -652,6 +658,11 @@ footer .icon-facebook {
     .footer-menu li {
         margin-bottom: 20px
     }
+		@media (max-width: 767px){
+			.footer-menu li {
+        margin-bottom: 15px
+    	}
+		}
     .footer-menu li.stick:after {
         display: none
     }
