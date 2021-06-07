@@ -240,8 +240,6 @@ display: block;
 }
 
 .site-header-cart .woocommerce-Price-amount {
-	opacity: 0;
-	visibility: hidden;
 	transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
 }
 
@@ -284,7 +282,7 @@ display: block;
 	white-space: nowrap;
 }
 
-@media (max-width: 911px){
+@media (max-width: 1000px){
 	.site-header-cart  {
 		display: none;
 	}
@@ -324,7 +322,7 @@ header .woocommerce-Price-amount {
 	visibility: hidden;
 }
 
-@media (max-width: 911px){
+@media (max-width: 1000px){
 	.container_menu-list.social {
 		display: none;
 	}
@@ -396,7 +394,7 @@ header .woocommerce-Price-amount {
 	justify-content: center;
 	line-height: 1;
 }
-@media (max-width: 911px){
+@media (max-width: 1000px){
 	.header-account {
 		display: none;
 	}
@@ -468,20 +466,18 @@ header .woocommerce-Price-amount {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
+	.container_logo {
+		width: 100px;
+	}
 	.container_menu-list li a {
-		font-size: 12px;
+    font-size: 12px;
 	}
 }
-
 @media screen and (max-width: 1024px) {
     
     .footer-menu li a {
         font-size: 12px !important;
-    }
-
-    .container_logo {
-        width: 100px;
     }
 
     .recomindations-title:before {

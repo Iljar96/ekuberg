@@ -9,6 +9,7 @@ html {
 body {
     margin: 0;
     min-height: 100%
+		-webkit-tap-highlight-color: transparent;
 }
 
 body._lock {
@@ -235,7 +236,13 @@ body textarea:visited {
 }
 
 .wrapper-all {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	overflow-x: hidden;
+}
+.wrapper__content {
+	flex: 1 1 auto;
 }
 
 .button {
@@ -298,14 +305,14 @@ body textarea:visited {
 .burger {
 	display: none;
 }
-@media (max-width: 911px) {
+@media (max-width: 1000px) {
 	.burger {
 		display: block;
 		position: absolute;
 		right: 0;
     top: 50%;
     transform: translateY(-50%);
-		width: 18px;
+		width: 20px;
 		height: 16px;
 		cursor: pointer;
 		z-index: 13;
@@ -415,15 +422,15 @@ body textarea:visited {
     flex-wrap: wrap;
 }
 
-@media all and (max-width:911px) {
+@media all and (max-width:1000px) {
     .burger {
         display: block
     }
 }
 
 .container_footer {
-    margin-top: 100px;
-    padding-top: 50px;
+    margin-top: auto;
+    padding-top: 60px;
     padding-bottom: 50px;
     background-color: #292d2d
 }
@@ -443,7 +450,7 @@ body textarea:visited {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-bottom: 50px
+    margin-bottom: 40px
 }
 
 .footer-menu li {
@@ -461,7 +468,7 @@ body textarea:visited {
 	align-items: center;
 }
 .footer-menu li a {
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
     -webkit-transition: .3s;
     -o-transition: .3s;

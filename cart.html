@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Продукт</title>
+	<title>Корзина</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-	<main class="wrapper-all">
+	<div class="wrapper-all">
 		<header class="container_desk-menu">
 			<div class="container">
 				<div class="row container_menu-elements">
@@ -76,15 +76,15 @@
 
 					<ul class="header-account">
 						<li>
-							<a class="header-account__reg header-account__item icon-user" href="#"><span>Войти</span></a>
+							<a class="header-account__reg header-account__item icon-user _active" href="#"><span>Войти</span></a>
 						</li>
 						<li>
-							<a class="header-account__acc header-account__item icon-user _active" href="#"><span>Профиль</span></a>
+							<a class="header-account__acc header-account__item icon-user" href="#"><span>Профиль</span></a>
 						</li>
 					</ul>
 
 					<!-- Cart -->
-					<ul class="site-header-cart menu _show">
+					<ul class="site-header-cart menu">
 						<li class="">
 							<a class="cart-contents icon-basket" href="https://themes.woocommerce.com/storefront/cart/"
 								title="View your shopping cart">
@@ -193,170 +193,286 @@
 						<nav class="woocommerce-breadcrumb" aria-label="breadcrumbs">
 							<a href="https://themes.woocommerce.com/storefront">Главная</a>
 							<span class="breadcrumb-separator">/</span>
-							<a href="https://themes.woocommerce.com/storefront">Уход и заживление ран</a>
-							<span class="breadcrumb-separator">/</span>
-							<a href="https://themes.woocommerce.com/storefront">Главная</a>
-							<span class="breadcrumb-separator">/</span>
-							<span>Защитный эндоректальный крем HEMOpran крем</span>
+							<span>Корзина</span>
 						</nav>
 					</div>
 				</div>
 			</div>
 
-			<div class="product-single">
+			<section class="cart-wrapper">
 				<div class="container">
-					<h1 class="product-single__title">Защитный эндоректальный крем HEMOpran крем</h1>
-					<div class="product-single__body">
-						<div class="product-single__slider">
-							<div class="swiper-container single-product">
-								<ul class="swiper-wrapper">
-									<li class="swiper-slide">
-										<img src="img/product/01.jpg" alt="HEMOpran">
-									</li>
-									<li class="swiper-slide">
-										<img src="img/product/01.jpg" alt="HEMOpran">
-									</li>
-									<li class="swiper-slide">
-										<img src="img/product/01.jpg" alt="HEMOpran">
-									</li>
-								</ul>
-							</div>
-							<div class="single-product-pagination pagination"></div>
+					<article id="post-5" class="post-5 page type-page status-publish hentry">
+						<div class="entry-header">
+							<h1 class="entry-title">Корзина</h1>
 						</div>
-						<div class="product-single__descr">
-							<div class="product-single__descr-text">
-								<p>Крем HEMOpran рекомендован для применения при наличии симптомов геморроя (зуд, кровоточивость,
-									раздражение). Входящие в состав защитного крема компоненты способствуют устранению симптомов геморроя
-									благодаря 3-му действию:</p>
-							</div>
+						<!-- .entry-header -->
+						<div class="entry-content">
+							<div class="woocommerce">
+								<form class="woocommerce-cart-form" action="https://themes.woocommerce.com/storefront/cart/"
+									method="post">
 
-							<ul class="product-single__descr-list">
-								<li>
-									Противовоспалительное, противоотечное (снимает зуд раздражение, болезненные ощущения)
-								</li>
-								<li>
-									Формирование на слизистой оболочке защитной пленке, которая снижает раздражающее воздействие каловых
-									масс на воспаленные геморроидальные узлы
-								</li>
-								<li>
-									Размягчение каловых масс и мягкое освежающее действие для обеспечения комфортного стула
-								</li>
-							</ul>
-							<div class="product-single__cols">
-								<div class="product-single__col-left">
-									<div class="product__price">
-										<span class="product__price-title">Стоимость:</span>
-										<span class="price products-card__price">
-											<span class="woocommerce-Price-amount amount">
-												5000.50
-												<span class="woocommerce-Price-currencySymbol">руб</span>
-											</span>
-										</span>
-										<span class="price products-card__price-old show">
-											<span class="woocommerce-Price-amount amount">
-												6000.50
-												<span class="woocommerce-Price-currencySymbol">руб</span>
-											</span>
-										</span>
-									</div>
-									<div class="products-card__bottom">
-										<div class="products-card__quantity quantity">
-											<div class="quantity__btns">
-												<div class="quantity__button quantity__button_plus"></div>
-												<div class="quantity__button quantity__button_minus"></div>
-											</div>
-											<div class="quantity__input">
-												<input type="number" autocomplete="off" name="form[]" value="1">
-											</div>
+									<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+										<thead>
+											<tr>
+												<th class="product-remove">&nbsp;</th>
+												<th class="product-thumbnail">&nbsp;</th>
+												<th class="product-name">Продукт</th>
+												<th class="product-price">Стоимость</th>
+												<th class="product-quantity">Количество</th>
+												<th class="product-subtotal">Итого</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											<tr class="woocommerce-cart-form__cart-item cart_item">
+
+												<td class="product-remove">
+													<a href="" class="remove">×</a>
+												</td>
+
+												<td class="product-thumbnail">
+													<a href="#">
+														<img width="200" height="200" src="img/cart/01.png"
+															class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">
+													</a>
+												</td>
+
+												<td class="product-name" data-title="Product">
+													<a href="#">Крем DermoACM Relip</a>
+												</td>
+
+												<td class="product-price" data-title="Price">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+
+												<td class="product-quantity" data-title="Quantity">
+													<div class="products-card__quantity quantity">
+														<div class="quantity__btns">
+															<div class="quantity__button quantity__button_plus"></div>
+															<div class="quantity__button quantity__button_minus"></div>
+														</div>
+														<div class="quantity__input">
+															<input type="number" autocomplete="off" name="form[]" value="1">
+														</div>
+													</div>
+												</td>
+
+												<td class="product-subtotal" data-title="Total">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+											</tr>
+
+											<tr class="woocommerce-cart-form__cart-item cart_item">
+
+												<td class="product-remove">
+													<a href="" class="remove">×</a>
+												</td>
+
+												<td class="product-thumbnail">
+													<a href="#">
+														<img width="200" height="200" src="img/cart/01.png"
+															class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">
+													</a>
+												</td>
+
+												<td class="product-name" data-title="Product">
+													<a href="#">Гель отшелушивающий для сухой и очень сухой кожи DermoACM NEOGALENIC</a>
+												</td>
+
+												<td class="product-price" data-title="Price">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+
+												<td class="product-quantity" data-title="Quantity">
+													<div class="products-card__quantity quantity">
+														<div class="quantity__btns">
+															<div class="quantity__button quantity__button_plus"></div>
+															<div class="quantity__button quantity__button_minus"></div>
+														</div>
+														<div class="quantity__input">
+															<input type="number" autocomplete="off" name="form[]" value="1">
+														</div>
+													</div>
+												</td>
+
+												<td class="product-subtotal" data-title="Total">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+											</tr>
+
+
+											<tr>
+												<td colspan="6" class="actions">
+													<div class="actions__row">
+														<div class="coupon">
+															<input type="text" name="coupon_code" class="input-text" value=""
+																placeholder="Код купона">
+															<input type="submit" class="button" name="apply_coupon" value="Применить купон">
+														</div>
+
+														<input type="submit" class="button update_btn disabled" name="update_cart"
+															value="Обновить корзину">
+
+
+														<input type="hidden" name="_wpnonce" value="8201e5e5e1"><input type="hidden"
+															name="_wp_http_referer" value="/storefront/cart/">
+													</div>
+
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<table class="shop_table shop_table-mob shop_table_responsive cart woocommerce-cart-form__contents">
+										<tbody>
+											<!-- Item -->
+											<tr>
+												<td colspan="2" class="product-thumbnail">
+													<a href="#">
+														<img width="200" height="200" src="img/cart/01.png"
+															class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">
+													</a>
+													<a href="" class="remove">×</a>
+												</td>
+											</tr>
+											<tr>
+												<th class="product-name">Продукт</th>
+												<td class="product-name" data-title="Product">
+													<a href="#">Крем DermoACM Relip</a>
+												</td>
+											</tr>
+											<tr>
+												<th class="product-price">Стоимость</th>
+												<td class="product-price" data-title="Price">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+											</tr>
+											<tr>
+												<th class="product-quantity">Количество</th>
+												<td class="product-quantity" data-title="Quantity">
+													<div class="products-card__quantity quantity">
+														<div class="quantity__btns">
+															<div class="quantity__button quantity__button_plus"></div>
+															<div class="quantity__button quantity__button_minus"></div>
+														</div>
+														<div class="quantity__input">
+															<input type="number" autocomplete="off" name="form[]" value="1">
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="last-row">
+												<th class="product-subtotal">Итого</th>
+												<td class="product-subtotal" data-title="Total">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+											</tr>
+											<!-- Item end -->
+
+											<!-- Item -->
+											<tr>
+												<td colspan="2" class="product-thumbnail">
+													<a href="#">
+														<img width="200" height="200" src="img/cart/01.png"
+															class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">
+													</a>
+													<a href="" class="remove">×</a>
+												</td>
+											</tr>
+											<tr>
+												<th class="product-name">Продукт</th>
+												<td class="product-name" data-title="Product">
+													<a href="#">Гель отшелушивающий для сухой и очень сухой кожи DermoACM NEOGALENIC</a>
+												</td>
+											</tr>
+											<tr>
+												<th class="product-price">Стоимость</th>
+												<td class="product-price" data-title="Price">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+											</tr>
+											<tr>
+												<th class="product-quantity">Количество</th>
+												<td class="product-quantity" data-title="Quantity">
+													<div class="products-card__quantity quantity">
+														<div class="quantity__btns">
+															<div class="quantity__button quantity__button_plus"></div>
+															<div class="quantity__button quantity__button_minus"></div>
+														</div>
+														<div class="quantity__input">
+															<input type="number" autocomplete="off" name="form[]" value="1">
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="last-row">
+												<th class="product-subtotal">Итого</th>
+												<td class="product-subtotal" data-title="Total">
+													<span class="woocommerce-Price-amount amount">1345<span
+															class="woocommerce-Price-currencySymbol">руб</span></span>
+												</td>
+											</tr>
+											<!-- Item end -->
+
+											<tr>
+												<td colspan="2" class="actions">
+													<div class="actions__row">
+														<div class="coupon">
+															<input type="text" name="coupon_code" class="input-text" value=""
+																placeholder="Код купона">
+															<input type="submit" class="button" name="apply_coupon" value="Применить купон">
+														</div>
+														<input type="submit" class="button update_btn disabled" name="update_cart"
+															value="Обновить корзину">
+														<input type="hidden" name="_wpnonce" value="8201e5e5e1"><input type="hidden"
+															name="_wp_http_referer" value="/storefront/cart/">
+													</div>
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</form>
+
+								<div class="cart-collaterals">
+									<div class="cart_totals ">
+
+										<table class="shop_table shop_table_responsive">
+
+											<tbody>
+												<tr class="order-total">
+													<th>Итого:</th>
+													<td data-title="Total"><span class="woocommerce-Price-amount amount">179.99<span
+																class="woocommerce-Price-currencySymbol">руб</span></span></td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="wc-proceed-to-checkout">
+											<a href="https://themes.woocommerce.com/storefront/checkout/"
+												class="checkout-button button alt wc-forward">
+												Оформить заказ</a>
 										</div>
-										<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-											class=" products-card__btn btn-product icon-cart">Добавить в корзину</a>
 									</div>
 								</div>
-								<div class="product-single__col-right">
-									<div class="product-single__delivery-term">
-										<p>Текст с условиями доставки. Курьер, пункт выдачи или другая информация</p>
-									</div>
-									<div class="product-single__payment-term">
-										<p>Текст с условиями оплаты. Оплата по карте, наличный и безналичный расчет</p>
-									</div>
-								</div>
-							</div>
 
-						</div>
-					</div>
-					<div class="product-single__primary">
-						<div class="product-single__content _tabs">
-							<nav class="product-single__nav">
-								<div class="product-single__navitem _tabs-item _active">ОПИСАНИЕ</div>
-								<div class="product-single__navitem _tabs-item">Видеообзор</div>
-								<div class="product-single__navitem _tabs-item">Инструкция</div>
-							</nav>
-							<div class="product-single__items">
-								<div class="product-single__block product-single__block--descr _tabs-block _active">
-									<div class="product-single__tab-text">
-										<p>Hemopran защитный эндоректальный крем рекомендуется в качестве адъюванта при леченииварикозного
-											геморроидального синдрома (внутренний и наружный геморрой) и раздражения анальной и перианальной
-											области
-											и слизистой оболочки.
-										</p>
-										<p>
-											Благодаря формированию защитной и смазочной пленки предотвращает общее раздражение из-за трения
-											при
-											наличии геморроя, часто вызываемого запорами, малоподвижным образом жизни, ортостатизмом и
-											беременностью. Способствует облегчению боли, снимает жжение и устраняет ощущения зуда. Насыщен
-											натуральными экстрактами с успокаивающим и освежающим действием. Не содержит производных
-											кортизона,
-											красителей и синтезированных ароматизаторов.
-										</p>
-									</div>
-									<ul class="product-single__descr-list">
-										<li>
-											Подходит для лечения и профилактики симптомов геморроя у беременных женщин и в период лактации,
-											пожилых людям, спортсменов, а также людей склонным к рецидивам геморроя
-										</li>
-										<li>
-											Без гормонов и анестетиков
-										</li>
-									</ul>
-									<div class="product-single__bottom-text">
-										<p><b>Упаковка:</b> 35 мл с аппликатором.</p>
-										<p><b>Производитель:</b> EKUBERG PHARMA s.u.r.l., via Pozzelle, 36 Martano (LE) – Italy, Италия.
-											Место производства (производственная площадка): BIODUE SPA, Via A. Lorenzetti, 3/A Loc. Sambuca
-											Val
-											Di
-											Pesa 50028 TAVARNELLE VAL DI PESA (Fl)- ITALY, Италия</p>
-									</div>
-								</div>
-								<div class="product-single__block product-single__block--video _tabs-block"></div>
-								<div class="product-single__block product-single__block--instruction _tabs-block"></div>
 							</div>
-						</div>
-						<div class="product-single__research research">
-							<div class="research__title">Исследвания</div>
-							<ul>
-								<li>
-									<a class="research__doc" href="#">Заголовок исследования или файла</a>
-								</li>
-								<li>
-									<a class="research__doc" href="#">Заголовок исследования или файла</a>
-								</li>
-								<li>
-									<a class="research__doc" href="#">Заголовок исследования или файла</a>
-								</li>
-								<li>
-									<a class="research__doc" href="#">Заголовок исследования или файла</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+						</div><!-- .entry-content -->
+					</article>
 				</div>
-			</div>
+			</section>
 
 			<section class="container__products container__products--recommendation">
 				<div class="container">
 					<h3 class="recommendation__title">
-						Другие продукты из категории
+						С этим покупают
 					</h3>
 					<div class="swiper-container products-swiper">
 						<ul class="swiper-wrapper">
@@ -367,9 +483,8 @@
 								<!-- ------ -->
 								<div class="products-card discount new hit">
 									<!-- Классы  "discount new hit" показывают -->
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+									<a href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+										class="products-card__img woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/01.png" alt="HEMOpran гель">
 										<div class="products-card__info">
 											<span class="products-card__discount">-10%</span>
@@ -412,8 +527,7 @@
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
 											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart">В
+												data-quantity="1" data-product_sku="" class=" products-card__btn btn-product icon-cart">В
 												корзину</a>
 										</div>
 									</div>
@@ -426,9 +540,8 @@
 								class="post-6226 product type-product status-publish has-post-thumbnail product_cat-trousers first instock shipping-taxable purchasable product-type-variable has-default-attributes has-children swiper-slide">
 								<!-- Card -->
 								<div class="products-card discount new hit">
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+									<a href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+										class="products-card__img woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/02.png" alt="HEMOpran гель">
 										<div class="products-card__info">
 											<span class="products-card__discount">-10%</span>
@@ -471,8 +584,7 @@
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
 											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart">В
+												data-quantity="1" data-product_sku="" class=" products-card__btn btn-product icon-cart">В
 												корзину</a>
 										</div>
 									</div>
@@ -486,9 +598,8 @@
 								class="post-6226 product type-product status-publish has-post-thumbnail product_cat-trousers first instock shipping-taxable purchasable product-type-variable has-default-attributes has-children swiper-slide">
 								<!-- Card -->
 								<div class="products-card">
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+									<a href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+										class="products-card__img woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/03.png" alt="HEMOpran гель">
 										<div class="products-card__info">
 											<span class="products-card__discount">-10%</span>
@@ -529,8 +640,7 @@
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
 											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart">В
+												data-quantity="1" data-product_sku="" class=" products-card__btn btn-product icon-cart">В
 												корзину</a>
 										</div>
 									</div>
@@ -543,9 +653,8 @@
 								class="post-6226 product type-product status-publish has-post-thumbnail product_cat-trousers first instock shipping-taxable purchasable product-type-variable has-default-attributes has-children swiper-slide">
 								<!-- Card -->
 								<div class="products-card">
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+									<a href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+										class="products-card__img woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/01.png" alt="HEMOpran гель">
 										<div class="products-card__info">
 											<span class="products-card__discount">-10%</span>
@@ -586,8 +695,7 @@
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
 											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart">В
+												data-quantity="1" data-product_sku="" class=" products-card__btn btn-product icon-cart">В
 												корзину</a>
 										</div>
 									</div>
@@ -603,8 +711,6 @@
 			</section>
 		</div>
 
-
-
 		<footer class="container_footer">
 			<div class="container">
 				<div class="row">
@@ -615,8 +721,7 @@
 								<a href="/product/">Вся продукция</a>
 								<ul class="sub-menu">
 									<li><a href="http://proderm.by/product_tax/vedenie-ran/">Уход за ранами</a></li>
-									<li><a href="http://proderm.by/product_tax/uhod-za-kozhej-lica-i-tela/">Уход за кожей лица и
-											тела</a>
+									<li><a href="http://proderm.by/product_tax/uhod-za-kozhej-lica-i-tela/">Уход за кожей лица и тела</a>
 									</li>
 									<li><a href="http://proderm.by/product_tax/uhod-za-kozhej-golovy-i-volosami/">Уход за кожей головы и
 											волосами</a></li>
@@ -658,11 +763,11 @@
 			</div>
 			<!-- <script src="http://proderm.by/wp-content/themes/ekuberg/js/wow.init.js"></script> -->
 		</footer>
-		</ь>
+	</div>
 
-		<script src="js/vendors.js"></script>
-		<script src="js/sliders.js"></script>
-		<script src="js/app.js"></script>
+	<script src="js/vendors.js"></script>
+	<script src="js/sliders.js"></script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
