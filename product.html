@@ -33,9 +33,9 @@
 					</div>
 					<ul id="menu-menju-v-shapke" class="container_menu-list container_menu-list--desc">
 						<li>
-							<a href="http://proderm.by/">Главная</a>
+							<a href="index.html">Главная</a>
 						</li>
-						<li class="menu-item-has-children"><a href="/product/">Вся продукция</a>
+						<li class="menu-item-has-children"><a href="catalog.html">Вся продукция</a>
 							<ul class="sub-menu">
 								<li>
 									<a href="http://proderm.by/product_tax/vedenie-ran/">Уход за ранами</a>
@@ -55,10 +55,10 @@
 								</li>
 							</ul>
 						</li>
-						<li class="menu-item-has-children"><a href="http://proderm.by/o-proizvoditele/">О производителе</a>
+						<li class="menu-item-has-children"><a href="manufacturer.html">О производителе</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="http://proderm.by/kachestvo-issledovanija-i-razrabotki/">Качество, исследования и
+									<a href="research.html">Качество, исследования и
 										разработки</a>
 								</li>
 								<li><a href="http://proderm.by/terapevticheskie-oblasti/">Терапевтические области</a></li>
@@ -76,21 +76,26 @@
 
 					<ul class="header-account">
 						<li>
-							<a class="header-account__reg header-account__item icon-user" href="#"><span>Войти</span></a>
+							<!-- ------ -->
+							<a class="header-account__reg header-account__item icon-user _active" href="#"><span>Войти</span></a>
+							<!-- _active -->
 						</li>
 						<li>
-							<a class="header-account__acc header-account__item icon-user _active" href="#"><span>Профиль</span></a>
+							<a class="header-account__acc header-account__item icon-user" href="#"><span>Профиль</span></a>
 						</li>
 					</ul>
 
 					<!-- Cart -->
+					<!-- ------ -->
 					<ul class="site-header-cart menu _show">
+						<!-- Класс _show показывает сумму -->
 						<li class="">
 							<a class="cart-contents icon-basket" href="https://themes.woocommerce.com/storefront/cart/"
 								title="View your shopping cart">
 								<span class="woocommerce-Price-amount amount">
-									<span class="woocommerce-Price-currencySymbol"></span>456
-									руб</span>
+									<span>456</span>
+									<span class="woocommerce-Price-currencySymbol">руб</span>
+								</span>
 								<span class="count">0 items</span>
 							</a>
 						</li>
@@ -118,10 +123,10 @@
 				</div>
 				<div class="collapse" id="burger">
 					<ul class="mobile-menu">
-						<li><a href="http://proderm.by/">Главная</a></li>
-						<li>
-							<a href="#menu-item-159">Вся продукция</a>
-							<ul class="mobile-submenu" id="menu-item-159">
+						<li><a href="index.html">Главная</a></li>
+						<li class="menu-item-has-children">
+							<a href="catalog.html">Вся продукция</a>
+							<ul class="sub-menu" id="menu-item-159">
 								<li><a href="http://proderm.by/product_tax/vedenie-ran/">Уход за ранами</a></li>
 								<li><a href="http://proderm.by/product_tax/uhod-za-kozhej-lica-i-tela/">Уход за кожей лица и тела</a>
 								</li>
@@ -131,10 +136,10 @@
 								<li><a href="https://humarforte.by/">Профилактика и лечение заболеваний ЛОР органов</a></li>
 							</ul>
 						</li>
-						<li>
-							<a href="#menu-item-61">О производителе</a>
-							<ul class="mobile-submenu" id="menu-item-61">
-								<li><a href="http://proderm.by/kachestvo-issledovanija-i-razrabotki/">Качество, исследования и
+						<li class="menu-item-has-children">
+							<a href="manufacturer.html">О производителе</a>
+							<ul class="sub-menu" id="menu-item-61">
+								<li><a href="research.html">Качество, исследования и
 										разработки</a></li>
 								<li><a href="http://proderm.by/terapevticheskie-oblasti/">Терапевтические области</a></li>
 								<li><a href="http://proderm.by/videnie-i-socialnye-objazatelstva/">Видение и социальные
@@ -269,8 +274,7 @@
 												<input type="number" autocomplete="off" name="form[]" value="1">
 											</div>
 										</div>
-										<a rel="nofollow" data-popup="cart"
-											href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+										<a rel="nofollow" data-popup="cart" href="product.html"
 											class=" products-card__btn btn-product icon-cart _popup-link">Добавить в корзину</a>
 									</div>
 								</div>
@@ -368,8 +372,7 @@
 								<!-- ------ -->
 								<div class="products-card discount new hit">
 									<!-- Классы  "discount new hit" показывают -->
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+									<a class="products-card__img" href="product.html"
 										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/01.png" alt="HEMOpran гель">
 										<div class="products-card__info">
@@ -381,7 +384,7 @@
 								<span class="price"><span class="woocommerce-Price-amount amount"><span
 											class="woocommerce-Price-currencySymbol">£</span>32.00</span></span> -->
 									</a>
-									<a class="woocommerce-loop-product__title products-card__title" href="#">Специализированный
+									<a class="woocommerce-loop-product__title products-card__title" href="product.html">Специализированный
 										гигиенический комплекс</a>
 									<div class="products-card__content">
 										<h3 class="products-card__name">HEMOpran гель</h3>
@@ -412,9 +415,8 @@
 												</div>
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
-											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-popup="cart" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart _popup-link">В
+											<a rel="nofollow" href="product.html" data-quantity="1" data-product_id="6226" data-popup="cart"
+												data-product_sku="" class=" products-card__btn btn-product icon-cart _popup-link">В
 												корзину</a>
 										</div>
 									</div>
@@ -427,8 +429,7 @@
 								class="post-6226 product type-product status-publish has-post-thumbnail product_cat-trousers first instock shipping-taxable purchasable product-type-variable has-default-attributes has-children swiper-slide">
 								<!-- Card -->
 								<div class="products-card discount new hit">
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+									<a class="products-card__img" href="product.html"
 										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/02.png" alt="HEMOpran гель">
 										<div class="products-card__info">
@@ -440,7 +441,8 @@
 								<span class="price"><span class="woocommerce-Price-amount amount"><span
 											class="woocommerce-Price-currencySymbol">£</span>32.00</span></span> -->
 									</a>
-									<a class="woocommerce-loop-product__title products-card__title" href="#">Смягчающий крем для
+									<a class="woocommerce-loop-product__title products-card__title" href="product.html">Смягчающий крем
+										для
 										интимной гигиены DermoXEN LENTIVO
 										(ДермоКСЕН
 										ЛЕНТИВО)</a>
@@ -471,9 +473,8 @@
 												</div>
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
-											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-popup="cart" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart _popup-link">В
+											<a rel="nofollow" href="product.html" data-quantity="1" data-product_id="6226" data-popup="cart"
+												data-product_sku="" class=" products-card__btn btn-product icon-cart _popup-link">В
 												корзину</a>
 										</div>
 									</div>
@@ -487,8 +488,7 @@
 								class="post-6226 product type-product status-publish has-post-thumbnail product_cat-trousers first instock shipping-taxable purchasable product-type-variable has-default-attributes has-children swiper-slide">
 								<!-- Card -->
 								<div class="products-card">
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+									<a class="products-card__img" href="product.html"
 										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/03.png" alt="HEMOpran гель">
 										<div class="products-card__info">
@@ -500,7 +500,7 @@
 											<span class="price"><span class="woocommerce-Price-amount amount"><span
 														class="woocommerce-Price-currencySymbol">£</span>32.00</span></span> -->
 									</a>
-									<a class="woocommerce-loop-product__title products-card__title" href="#">Суппозитории
+									<a class="woocommerce-loop-product__title products-card__title" href="product.html">Суппозитории
 										вагинальные</a>
 									<div class="products-card__content">
 										<h3 class="products-card__name">DermoXEN BACTOR</h3>
@@ -529,9 +529,8 @@
 												</div>
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
-											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-popup="cart" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart _popup-link">В
+											<a rel="nofollow" href="product.html" data-quantity="1" data-product_id="6226" data-popup="cart"
+												data-product_sku="" class=" products-card__btn btn-product icon-cart _popup-link">В
 												корзину</a>
 										</div>
 									</div>
@@ -544,8 +543,7 @@
 								class="post-6226 product type-product status-publish has-post-thumbnail product_cat-trousers first instock shipping-taxable purchasable product-type-variable has-default-attributes has-children swiper-slide">
 								<!-- Card -->
 								<div class="products-card">
-									<a class="products-card__img"
-										href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
+									<a class="products-card__img" href="product.html"
 										class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 										<img src="img/products/01.png" alt="HEMOpran гель">
 										<div class="products-card__info">
@@ -557,7 +555,7 @@
 								<span class="price"><span class="woocommerce-Price-amount amount"><span
 											class="woocommerce-Price-currencySymbol">£</span>32.00</span></span> -->
 									</a>
-									<a class="woocommerce-loop-product__title products-card__title" href="#">Специализированный
+									<a class="woocommerce-loop-product__title products-card__title" href="product.html">Специализированный
 										гигиенический комплекс</a>
 									<div class="products-card__content">
 										<h3 class="products-card__name">HEMOpran гель</h3>
@@ -586,9 +584,8 @@
 												</div>
 											</div>
 											<!-- <button type="button" class="products-card__btn btn-product icon-cart">В корзину</button> -->
-											<a rel="nofollow" href="https://themes.woocommerce.com/storefront/product/black-trousers-2/"
-												data-quantity="1" data-product_id="6226" data-popup="cart" data-product_sku=""
-												class=" products-card__btn btn-product icon-cart _popup-link">В
+											<a rel="nofollow" href="product.html" data-quantity="1" data-product_id="6226" data-popup="cart"
+												data-product_sku="" class=" products-card__btn btn-product icon-cart _popup-link">В
 												корзину</a>
 										</div>
 									</div>
