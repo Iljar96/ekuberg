@@ -32,9 +32,16 @@ ibg();
 //=================
 //Remove _hidden
 document.addEventListener("DOMContentLoaded", function (event) {
-	document.querySelectorAll('._hidden').forEach((el) => {
-		el.classList.remove('_hidden');
-	});
+	const hiddens = document.querySelectorAll('._hidden');
+	if (hiddens.length > 0) {
+		for (let i = 0; i < hiddens.length; i++) {
+			hiddens[i].classList.remove('_hidden');
+		}
+	}
+
+	// document.querySelectorAll('._hidden').forEach((el) => {
+	// 	el.classList.remove('_hidden');
+	// });
 });
 
 let unlock = true;
@@ -71,13 +78,20 @@ function menu_close() {
 }
 
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu .menu-item-has-children > a');
-mobileMenuLinks.forEach(function (link) {
-	link.addEventListener('click', function (e) {
+for (let i = 0; i < mobileMenuLinks.length; i++) {
+	mobileMenuLinks[i].addEventListener('click', function (e) {
 		e.preventDefault();
 		const targetSubMenu = e.target.closest('.menu-item-has-children').querySelector('.mobile-menu .sub-menu');
-		_slideToggle(targetSubMenu);
+		_slideToggle(targetSubMenu, 500);
 	})
-})
+}
+// mobileMenuLinks.forEach(function (link) {
+// 	link.addEventListener('click', function (e) {
+// 		e.preventDefault();
+// 		const targetSubMenu = e.target.closest('.menu-item-has-children').querySelector('.mobile-menu .sub-menu');
+// 		_slideToggle(targetSubMenu);
+// 	})
+// })
 //=================
 //BodyLock
 function body_lock(delay) {
@@ -92,7 +106,7 @@ function body_lock_remove(delay) {
 	let body = document.querySelector("body");
 	if (unlock) {
 		let lock_padding = document.querySelectorAll("._lp");
-		setTimeout(() => {
+		setTimeout(function () {
 			for (let index = 0; index < lock_padding.length; index++) {
 				const el = lock_padding[index];
 				el.style.paddingRight = '0px';
@@ -324,12 +338,12 @@ if (spollers.length > 0) {
 					let el = curent_spollers[i];
 					if (el != spoller) {
 						el.classList.remove('_active');
-						_slideUp(el.nextElementSibling);
+						_slideUp(el.nextElementSibling, 500);
 					}
 				}
 			}
 			spoller.classList.toggle('_active');
-			_slideToggle(spoller.nextElementSibling);
+			_slideToggle(spoller.nextElementSibling, 500);
 
 			setTimeout(function () {
 				spollersGo = true;
@@ -358,7 +372,7 @@ if (spollers.length > 0) {
 		for (let index = 0; index < spollers.length; index++) {
 			const spoller = spollers[index];
 			if (spoller.classList.contains('_active')) {
-				_slideToggle(spoller.nextElementSibling);
+				_slideToggle(spoller.nextElementSibling, 500);
 			}
 		}
 	}
@@ -388,11 +402,11 @@ for (let index = 0; index < popups.length; index++) {
 	const popup = popups[index];
 	popup.addEventListener("click", function (e) {
 		if (!e.target.closest('.popup__body')) {
-			popup_close(e.target.closest('.popup'));
+			popup_close(e.target.closest('.popup'), true);
 		}
 	});
 }
-function popup_open(item, video = '') {
+function popup_open(item, video) {
 	let activePopup = document.querySelectorAll('.popup._active');
 	if (activePopup.length > 0) {
 		popup_close('', false);
@@ -410,7 +424,7 @@ function popup_open(item, video = '') {
 		history.pushState('', '', '#' + item);
 	}
 }
-function popup_close(item, bodyUnlock = true) {
+function popup_close(item, bodyUnlock) {
 	if (unlock) {
 		if (!item) {
 			for (let index = 0; index < popups.length; index++) {
@@ -439,7 +453,7 @@ if (popup_close_icon) {
 	for (let index = 0; index < popup_close_icon.length; index++) {
 		const el = popup_close_icon[index];
 		el.addEventListener('click', function () {
-			popup_close(el.closest('.popup'));
+			popup_close(el.closest('.popup'), true);
 		})
 	}
 }
@@ -451,7 +465,7 @@ document.addEventListener('keydown', function (e) {
 
 //=================
 //SlideToggle
-let _slideUp = (target, duration = 500) => {
+let _slideUp = function (target, duration) {
 	target.style.transitionProperty = 'height, margin, padding';
 	target.style.transitionDuration = duration + 'ms';
 	target.style.height = target.offsetHeight + 'px';
@@ -462,7 +476,7 @@ let _slideUp = (target, duration = 500) => {
 	target.style.paddingBottom = 0;
 	target.style.marginTop = 0;
 	target.style.marginBottom = 0;
-	window.setTimeout(() => {
+	window.setTimeout(function () {
 		target.style.display = 'none';
 		target.style.removeProperty('height');
 		target.style.removeProperty('padding-top');
@@ -475,7 +489,7 @@ let _slideUp = (target, duration = 500) => {
 		target.classList.remove('_slide');
 	}, duration);
 }
-let _slideDown = (target, duration = 500) => {
+let _slideDown = function (target, duration) {
 	target.style.removeProperty('display');
 	let display = window.getComputedStyle(target).display;
 	if (display === 'none')
@@ -497,7 +511,7 @@ let _slideDown = (target, duration = 500) => {
 	target.style.removeProperty('padding-bottom');
 	target.style.removeProperty('margin-top');
 	target.style.removeProperty('margin-bottom');
-	window.setTimeout(() => {
+	window.setTimeout(function () {
 		target.style.removeProperty('height');
 		target.style.removeProperty('overflow');
 		target.style.removeProperty('transition-duration');
@@ -505,7 +519,7 @@ let _slideDown = (target, duration = 500) => {
 		target.classList.remove('_slide');
 	}, duration);
 }
-let _slideToggle = (target, duration = 500) => {
+let _slideToggle = function (target, duration) {
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
 		if (window.getComputedStyle(target).display === 'none') {
@@ -532,44 +546,6 @@ function _removeClasses(el, class_name) {
 //IsHidden
 function _is_hidden(el) {
 	return (el.offsetParent === null)
-}
-//Animate
-function animate({ timing, draw, duration }) {
-	let start = performance.now();
-	requestAnimationFrame(function animate(time) {
-		// timeFraction изменяется от 0 до 1
-		let timeFraction = (time - start) / duration;
-		if (timeFraction > 1) timeFraction = 1;
-
-		// вычисление текущего состояния анимации
-		let progress = timing(timeFraction);
-
-		draw(progress); // отрисовать её
-
-		if (timeFraction < 1) {
-			requestAnimationFrame(animate);
-		}
-
-	});
-}
-function makeEaseOut(timing) {
-	return function (timeFraction) {
-		return 1 - timing(1 - timeFraction);
-	}
-}
-function makeEaseInOut(timing) {
-	return function (timeFraction) {
-		if (timeFraction < .5)
-			return timing(2 * timeFraction) / 2;
-		else
-			return (2 - timing(2 * (1 - timeFraction))) / 2;
-	}
-}
-function quad(timeFraction) {
-	return Math.pow(timeFraction, 2)
-}
-function circ(timeFraction) {
-	return 1 - Math.sin(Math.acos(timeFraction));
 }
 /*
 animate({
@@ -628,15 +604,30 @@ if (quantityButtons.length > 0) {
 
 //Placeholder
 const placeholderParents = document.querySelectorAll('._placeholder-parent');
-placeholderParents.forEach(placeholderParent => {
-	const input = placeholderParent.querySelector('input');
-	const placeholder = placeholderParent.querySelector('._placeholder');
+if (placeholderParents.length > 0) {
+	for (let i = 0; i < placeholderParents.length; i++) {
+		const placeholderParent = placeholderParents[i];
+		const input = placeholderParent.querySelector('input');
+		const placeholder = placeholderParent.querySelector('._placeholder');
 
-	input.addEventListener('focus', e => {
-		placeholder.classList.add('_hidden');
-	})
-	input.addEventListener('blur', e => {
-		if (e.target && e.target.value.trim() === '')
-			placeholder.classList.remove('_hidden');
-	})
-})
+		input.addEventListener('focus', function (e) {
+			placeholder.classList.add('_hidden');
+		})
+		input.addEventListener('blur', function (e) {
+			if (e.target && e.target.value.trim() === '')
+				placeholder.classList.remove('_hidden');
+		})
+	}
+}
+// placeholderParents.forEach(placeholderParent => {
+// 	const input = placeholderParent.querySelector('input');
+// 	const placeholder = placeholderParent.querySelector('._placeholder');
+
+// 	input.addEventListener('focus', e => {
+// 		placeholder.classList.add('_hidden');
+// 	})
+// 	input.addEventListener('blur', e => {
+// 		if (e.target && e.target.value.trim() === '')
+// 			placeholder.classList.remove('_hidden');
+// 	})
+// })
