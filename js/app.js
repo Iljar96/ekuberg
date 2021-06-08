@@ -31,11 +31,11 @@ ibg();
 
 //=================
 //Remove _hidden
-setTimeout(function () {
+document.addEventListener("DOMContentLoaded", function (event) {
 	document.querySelectorAll('._hidden').forEach((el) => {
 		el.classList.remove('_hidden');
 	});
-}, 1000);
+});
 
 let unlock = true;
 
@@ -69,6 +69,15 @@ function menu_close() {
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("show");
 }
+
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu .menu-item-has-children > a');
+mobileMenuLinks.forEach(function (link) {
+	link.addEventListener('click', function (e) {
+		e.preventDefault();
+		const targetSubMenu = e.target.closest('.menu-item-has-children').querySelector('.mobile-menu .sub-menu');
+		_slideToggle(targetSubMenu);
+	})
+})
 //=================
 //BodyLock
 function body_lock(delay) {
@@ -368,7 +377,7 @@ for (let index = 0; index < popup_link.length; index++) {
 	const el = popup_link[index];
 	el.addEventListener('click', function (e) {
 		if (unlock) {
-			let item = el.getAttribute('href').replace('#', '');
+			let item = el.getAttribute('data-popup');
 			let video = el.getAttribute('data-video');
 			popup_open(item, video);
 		}
@@ -616,3 +625,18 @@ if (quantityButtons.length > 0) {
 		});
 	}
 }
+
+//Placeholder
+const placeholderParents = document.querySelectorAll('._placeholder-parent');
+placeholderParents.forEach(placeholderParent => {
+	const input = placeholderParent.querySelector('input');
+	const placeholder = placeholderParent.querySelector('._placeholder');
+
+	input.addEventListener('focus', e => {
+		placeholder.classList.add('_hidden');
+	})
+	input.addEventListener('blur', e => {
+		if (e.target && e.target.value.trim() === '')
+			placeholder.classList.remove('_hidden');
+	})
+})

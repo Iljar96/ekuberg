@@ -8,7 +8,7 @@ html {
 
 body {
     margin: 0;
-    min-height: 100%
+    min-height: 100%;
 		-webkit-tap-highlight-color: transparent;
 }
 
@@ -143,17 +143,14 @@ body textarea:visited {
     -webkit-box-shadow: none;
     box-shadow: none
 }
-
+body._lock {
+	overflow: hidden;
+}
 .height100 {
     height: 100%
 }
 
 .container_title {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-		flex-wrap: wrap;
     width: 100%
 }
 
@@ -348,12 +345,18 @@ body textarea:visited {
 
 
 .container_logo {
+		display: flex;
+		align-items: center;
     height: 96px;
     width: 170px;
 		position: relative;
 		z-index: 13;
 }
-
+@media (max-width: 576px){
+	.container_logo {
+    height: 90px;
+	}
+}
 .container_logo img {
     -o-object-fit: contain;
     object-fit: contain;
@@ -596,7 +599,7 @@ footer .icon-facebook {
     margin-bottom: 15px;
 }
 
-.mobile-submenu {
+.mobile-menu .sub-menu {
     margin-top: 10px;
     list-style-type: disc;
     list-style-position: inside;
@@ -667,8 +670,11 @@ footer .icon-facebook {
     }
 		@media (max-width: 767px){
 			.footer-menu li {
-        margin-bottom: 15px
+        margin-bottom: 13px
     	}
+			.footer-menu .footer-instagram {
+				margin-bottom: 18px;
+			}
 		}
     .footer-menu li.stick:after {
         display: none

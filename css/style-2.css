@@ -191,6 +191,15 @@ display: block;
     display: none;
     box-shadow: 0 1px 1px 0 #eae8e8;
 }
+.mobile-menu .sub-menu {
+    position: static;
+    top: auto;
+    padding: 0;
+    margin: 15px 0 0;
+    width: auto;
+    display: none;
+    box-shadow: none;
+}
 
 
 .purchase {
