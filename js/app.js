@@ -613,6 +613,9 @@ if (placeholderParents.length > 0) {
 		input.addEventListener('focus', function (e) {
 			placeholder.classList.add('_hidden');
 		})
+		input.addEventListener('input', function (e) {
+			placeholder.classList.add('_hidden');
+		})
 		input.addEventListener('blur', function (e) {
 			if (e.target && e.target.value.trim() === '')
 				placeholder.classList.remove('_hidden');
