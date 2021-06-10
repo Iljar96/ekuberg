@@ -5424,7 +5424,11 @@ form > div.woocommerce-checkout-review-order > h3 {
   left: 0;
   width: 244px;
 }
-
+.ie .brands__slider {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
 .ie .brands__slide {
   height: auto;
 }
@@ -5543,6 +5547,7 @@ form > div.woocommerce-checkout-review-order > h3 {
     -ms-flex: 0 0 22%;
     flex: 0 0 22%;
     margin-bottom: 2.7%;
+    margin-right: 0 !important;
     height: auto;
   }
 }
